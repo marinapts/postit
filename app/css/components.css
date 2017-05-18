@@ -1,0 +1,161 @@
+/* ============
+    Dashbord
+=============== */
+
+#dashboard-area {
+    /* Force the dashboard to cover the whole page */
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.height100 {
+    /*background-color: pink; */
+    height: 100%;
+}
+
+#inner-dropzone {
+    /*background-color: #823b17; */
+    height: 100%;
+    width: 100%;
+    background: url('/img/board.jpg') center;
+    border: #d9a261 solid 15px;
+}
+
+.dropzone {
+    background-color: #ccc;
+    border: dashed 4px transparent;
+    border-radius: 4px;
+    /*margin: 10px auto 30px;*/
+    padding: 10px;
+    width: 80%;
+    transition: background-color 0.3s;
+}
+
+.drop-active {
+    border-color: #aaa;
+}
+
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
+}
+
+
+.drag-drop {
+    display: inline-block;
+    min-width: 11rem;
+    min-height: 11rem;
+    padding: 1em 1.5em;
+    margin-top: 1rem;
+    resize: none;
+
+    color: #000;
+    background-color: #ffff80;
+    border-color: transparent;
+    font-family:"Reenie Beanie";
+    font-size: 1.6rem;
+    border-bottom-right-radius: 60px 5px;
+
+    -webkit-transform: translate(0px, 0px);
+            transform: translate(0px, 0px);
+    
+    /* Box shadow for all browsers */
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,0.5);       /* Firefox */
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,0.5);  /* Safari+Chrome */ 
+    box-shadow: 5px 5px 7px rgba(33,33,33,0.5);          /* Opera */
+    
+    /* Smooth transition */
+    -moz-box-shadow:5px 5px 7px rgba(33,33,33,1);
+    -webkit-box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    box-shadow: 5px 5px 7px rgba(33,33,33,.7);
+    -moz-transition:-moz-transform .03s ease;
+    -o-transition:-o-transform .03s ease;
+    -webkit-transition:-webkit-transform .03s ease;
+    
+    /* When a new card is created, it is positioned on top */
+    position: absolute;
+    left: 1rem;
+    top: 0rem;
+    cursor: move;
+}
+
+@media screen and (max-width: 1100px) {
+    .drag-drop {
+        min-width: 10rem;
+        min-height: 10rem;
+    }
+}
+
+
+@media screen and (max-width: 880px) {
+    .drag-drop {
+        min-width: 7rem;
+        min-height: 7rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .drag-drop {
+        min-width: 5rem;
+        min-height: 5rem;
+        font-size: 0.5rem;
+    }
+
+    #bin {
+        font-size: 5rem;
+    }
+}
+
+.drag-drop.can-drop:hover, .drag-drop.can-drop:focus{
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position:relative;
+    z-index:5;
+
+    color: #000;
+    background-color: #ffff80;
+}
+
+.drag-drop.can-drop:hover, .drag-drop.can-drop:focus{
+    -moz-box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0,0,0,.7);
+    box-shadow:10px 10px 7px rgba(0,0,0,.7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    position:fixed;
+    z-index:5;
+
+    color: #000;
+    background-color: #ffff80;
+}
+
+textarea {
+    width: 0;
+    cursor: text;
+}
+
+
+textarea:focus {
+    outline: none;
+}
+
+#bin {
+    font-size: 12rem;
+    padding-top: 5rem;
+    position: relative;
+    margin-top: 0;
+}
+
+.drop-bin {
+    font-size: 15rem;
+}

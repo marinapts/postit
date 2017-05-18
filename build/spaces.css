@@ -1,0 +1,104 @@
+/*========================
+
+  Create or reduce spaces 
+
+==========================*/
+
+/******************
+  Padding Sides 
+********************/ 
+
+.padSides10 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.padSides20 {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.padSides30 {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.padSides50 {
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+.padSides100 {
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.padSides200 {
+  padding-left: 200px;
+  padding-right: 200px;
+}
+
+
+
+/***********************
+  Padding Top & Bottom 
+************************/ 
+
+.padTopBottom10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.padTopBottom20 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.padTopBottom30 {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+
+
+/**************
+  Padding Top 
+***************/ 
+.padTop10 {
+  padding-top: 10px;
+}
+
+.padTop20 {
+  padding-top: 20px;
+}
+
+.padTop30 {
+  padding-top: 30px;
+}
+
+
+/*****************
+  Padding Bottom  
+******************/ 
+
+.padBottom10 {
+  padding-bottom: 10px;
+}
+
+.padBottom20 {
+  padding-bottom: 20px;
+}
+
+.padBottom30 {
+  padding-bottom: 30px;
+}
+
+
+
+/*****************
+  Margin  
+******************/ 
+
+.noMarginBottom {
+  margin-bottom: 0px;
+}
