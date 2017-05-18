@@ -1,5 +1,6 @@
 import React from 'react';
 import interact from 'Interact';
+import firebase, {firebaseRef} from 'app/firebase/';
 
 var Dashboard = React.createClass ({
     
@@ -11,6 +12,22 @@ var Dashboard = React.createClass ({
         });
     },
     
+    componentWillMount: function () {
+        var _this = this;
+
+        // firebaseRef.on('child_added', (snapshot) => {
+        //     _this.postitsOnBoard.push(snapshot.val());
+        //     _this.setState({
+        //         postitsOnBoard: _this.postitsOnBoard
+        //     })    
+        // });
+        var postitRef = firebaseRef.child('card-'+ _this.state.count);
+        postitRef.set({
+            id: 'card1',
+            text: 'test'
+        })
+    },
+
     componentDidMount: function () {
 
         var {firstLoading, count} = this.state;

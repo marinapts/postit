@@ -38,10 +38,12 @@ module.exports = {
       JqueryValidate: path.resolve(__dirname,'./app/js/jquery.validate.min.js'),
       Materialize: path.resolve(__dirname,'./app/js/materialize.min.js'),
       Interact: path.resolve(__dirname,'./app/js/interact.min.js'),
-
+      
       // Components
       Dashboard: path.resolve(__dirname,'./app/components/Dashboard.jsx'),
       Navbar: path.resolve(__dirname,'./app/components/Navbar.jsx'),
+
+      app: path.resolve(__dirname,'./app/'),
       
 
     },
