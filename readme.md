@@ -18,27 +18,38 @@ You need to have the latest version of node and npm or yarn installed in your co
 
 ## Installation
 Clone the repository
+    
     git clone https://github.com/marinapotsi/postit.git
 
 Navigate to postit folder
+    
     cd  postit/
 
+
 Install the dependencies in the local node_modules folder using npm or yarn
+
     npm install
 
 or
+
     yarn
+
 
 
 
 ## Run
 
 Initialize the bundling of css files and webpack
+
     gulp 
 
 
+
 Initialize the server: 
+
     node server.js
+
+
 
 
 
