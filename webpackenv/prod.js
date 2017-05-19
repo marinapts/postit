@@ -13,12 +13,10 @@ module.exports = function (env) {
                 'jQuery': 'jquery'
             }),
             new webpack.optimize.UglifyJsPlugin({
+                beautify: false,
+                comments: false,
                 compress: {
                     warnings: false,
-                    //drop_console: true
-                    global_defs: {
-                        DEBUG: true
-                    }
                 }
             }),
             new webpack.DefinePlugin({

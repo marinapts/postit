@@ -47,6 +47,15 @@ Initialize the bundling of css files and webpack
 
 Initialize the server: 
 
+    npm start 
+
+or
+
+    yarn start 
+
+
+or
+
     node server.js
 
 

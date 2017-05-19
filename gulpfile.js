@@ -5,6 +5,17 @@ var changed = require('gulp-changed');
 var concat = require('gulp-concat');
 var cleanCSS = require('gulp-clean-css');
 var webpack = require("webpack");
+var child = require('child_process');
+var fs = require('fs');
+
+
+// Initialize server
+gulp.task('server', function() {
+  var server = child.spawn('node', ['server.js']);
+  var log = fs.createWriteStream('server.log', {flags: 'a'});
+  server.stdout.pipe(log);
+  server.stderr.pipe(log);
+});
 
 
 // Concatenate & Minify CSS
@@ -26,11 +37,11 @@ gulp.task('minify-css', function () {
 });
 
 // Run webpack
-var spawn = require('child_process').spawn;
+var spawn = child.spawn;
 
 gulp.task('webpack-watch', (cb) => {
 
-    const webpack_watch = spawn('webpack', ['--watch', '--color', '--env=prod']);
+    const webpack_watch = spawn('webpack', ['--watch', '--color', '--env=dev']);
 
     webpack_watch.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
@@ -51,4 +62,4 @@ gulp.task('watch-css', function() {
  }); 
 
 // Default Task
-gulp.task('default', ['minify-css', 'watch-css', 'webpack-watch']);
+gulp.task('default', ['server', 'minify-css', 'watch-css', 'webpack-watch']);
