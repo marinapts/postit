@@ -15,19 +15,14 @@ var Dashboard = React.createClass ({
     componentWillMount: function () {
         var _this = this;
 
+        // 
+
         // firebaseRef.on('child_added', (snapshot) => {
         //     _this.postitsOnBoard.push(snapshot.val());
         //     _this.setState({
         //         postitsOnBoard: _this.postitsOnBoard
         //     })    
         // });
-        
-
-        //     id: 'card1',
-        //     text: 'test'
-        // postitRef.set({
-        // var postitRef = firebaseRef.child('card-'+ _this.state.count);
-        // })
     },
 
     componentDidMount: function () {
@@ -315,7 +310,7 @@ var Dashboard = React.createClass ({
                     <div className="row" style={{height:'50%'}}>
                         <div className="col s12" id="delete-area" style={{height:'80%'}}>
                             {/* <i className="material-icons grey-text deletezone" id="bin">delete</i> */}
-                            <img src="/img/close-bin.svg" id="bin" alt="" className="deletezone" style={{height: '100%', width:'130%'}}/>
+                            <img src="/img/close-bin.svg" id="bin" alt="" className="deletezone" style={{height: '100%', width:'110%'}}/>
                         </div>
                     </div>
                 </div>
