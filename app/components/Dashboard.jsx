@@ -21,11 +21,13 @@ var Dashboard = React.createClass ({
         //         postitsOnBoard: _this.postitsOnBoard
         //     })    
         // });
-        var postitRef = firebaseRef.child('card-'+ _this.state.count);
-        postitRef.set({
-            id: 'card1',
-            text: 'test'
-        })
+        
+
+        //     id: 'card1',
+        //     text: 'test'
+        // postitRef.set({
+        // var postitRef = firebaseRef.child('card-'+ _this.state.count);
+        // })
     },
 
     componentDidMount: function () {
@@ -99,6 +101,11 @@ var Dashboard = React.createClass ({
                     var allPostits = _this.state.postitsOnBoard;
                     
                     allPostits[e.target.id].text = e.target.value;
+                    
+                    // Update card in firebase
+                    firebaseRef.child(id).update({
+                        text: e.target.value
+                    });
 
                     _this.setState({
                         postitsOnBoard: allPostits 
@@ -123,7 +130,7 @@ var Dashboard = React.createClass ({
         }
 
 
-        // enable draggables to be dropped into this
+        // enable draggables to be dropped into the board
         interact('.dropzone').dropzone({
             // only accept elements matching this CSS selector
             accept: '.draggable',
@@ -175,11 +182,17 @@ var Dashboard = React.createClass ({
                     $('img[src="/img/open-bin.svg"]').attr('src', '/img/close-bin.svg');
                 }
                 else {
+                    // Create a child into the firebase object
+                    var postitRef = firebaseRef.child(cardId);
+                    
                     var cardToPost = {
                         id: cardId,
                         text: ''
                     };
 
+                    // Save new card to the database
+                    postitRef.set(cardToPost);
+                    // Set new card to the state
                     _this.setState({
                         postitsOnBoard: {...postitsOnBoard, [cardId]: cardToPost},
                         count: count + 1,
@@ -249,6 +262,9 @@ var Dashboard = React.createClass ({
                     if(Object.keys(_this.state.postitsOnBoard).length > 0) {
                         console.log('has', $('#create-card-area').has('textarea').length);
                         
+                        // Remove the card from the firebase
+                        firebaseRef.child(cardId).remove();
+
                         // Remove the specific div from the DOM - delete it from the state
                         $('#' + cardId).remove();
                         delete postitsOnBoard[cardId];
