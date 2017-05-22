@@ -1,6 +1,8 @@
 # Post-it React Application
 
 A React application where you can create, modify and delete postits using drag-and-drop actions.
+The application is located on [http://postit-board.herokuapp.com/](http://postit-board.herokuapp.com/).
+
 
 ## Getting Started
 
@@ -14,40 +16,22 @@ Tools used:
 
 ## Prerequisites
 
-You need to have the latest version of node and npm or yarn installed in your computer.
+You need to have the latest version of node and npm or yarn installed on your computer.
 
 
 
-## Installation
-Clone the repository
-    
-    git clone https://github.com/marinapotsi/postit.git
-
-Navigate to the folder
-    
-    cd  postit/
+## Installation and Run
+Clone the repository and install the dependencies in the local node_modules folder using npm or yarn
 
 
-Install the dependencies in the local node_modules folder using npm or yarn
-
-    npm install
-
-or
-
-    yarn
-
+```    
+git clone https://github.com/marinapotsi/postit.git
+cd  postit/
+npm install
+gulp
+``` 
 
 
-
-## Run
-
-Initialize the server, the bundling of css files and webpack using
-
-    gulp 
-
-
-In your browser type
-    
-    http://localhost:3000/
+In your browser type `http://localhost:3000/`
 
 
