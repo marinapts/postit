@@ -46,4 +46,8 @@ Initialize the server, the bundling of css files and webpack using
     gulp 
 
 
+In your browser type
+    
+    http://localhost:3000/
+
 
