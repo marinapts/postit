@@ -41,7 +41,7 @@ var spawn = child.spawn;
 
 gulp.task('webpack-watch', (cb) => {
 
-    const webpack_watch = spawn('webpack', ['--watch', '--color', '--env=dev']);
+    const webpack_watch = spawn('webpack', ['--watch', '--color', '--env=prod']);
 
     webpack_watch.stdout.on('data', (data) => {
         console.log(`stdout: ${data}`);
