@@ -8,7 +8,9 @@ Tools used:
 
 * **Webpack** for bundling files and compiling
 * **Materialize** css framework
-* **Gulp** for css files bundling and webpack initialization 
+* **Gulp** for css files bundling and webpack initialization
+* **interact.js** for drag and drop events  
+
 
 ## Prerequisites
 
@@ -21,7 +23,7 @@ Clone the repository
     
     git clone https://github.com/marinapotsi/postit.git
 
-Navigate to postit folder
+Navigate to the folder
     
     cd  postit/
 
@@ -39,26 +41,9 @@ or
 
 ## Run
 
-Initialize the bundling of css files and webpack
+Initialize the server, the bundling of css files and webpack using
 
     gulp 
-
-
-
-Initialize the server: 
-
-    npm start 
-
-or
-
-    yarn start 
-
-
-or
-
-    node server.js
-
-
 
 
 
